@@ -1,0 +1,10 @@
+firstList = [int(x) for x in input("Podaj po przecinku pierwszy zbiór:\n").split(', ')] 
+secondList = [int(x) for x in input("Podaj po przecinku drugi zbiór:\n").split(', ')] 
+
+firstSet = set(firstList)
+secondSet = set(secondList)
+
+print("Suma:", set.union(firstSet, secondSet))
+print("Różnica:", set.difference(firstSet, secondSet))
+print("Część wspólna:", set.intersection(firstSet, secondSet))
+print("Różnica symetryczna:", set.symmetric_difference(firstSet, secondSet))
