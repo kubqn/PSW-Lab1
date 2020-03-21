@@ -1,0 +1,20 @@
+import sys
+binary = input("Podaj ciąg binarny:")
+count = 0
+helper = 0
+for i in binary:
+    if i != "0" and i != "1":
+        print("To nie jest ciąg binarny!")
+        exit()
+        
+for i in binary:
+    if i == "1" and helper == 0:
+        helper = 1
+    elif i == "0" and helper == 1:
+        helper = 2
+    elif i == "1" and helper == 2:
+        helper = 1
+        count+=1
+
+print(count)
+
