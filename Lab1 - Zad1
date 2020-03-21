@@ -1,0 +1,11 @@
+numbers = set()
+while(True):
+    newNumber = input("Podaj liczbę całkowitą. Wpisz \"stop\", żeby zakończyć.\n")
+    if(newNumber == "stop"):
+        break
+    try:
+        int(newNumber)
+        numbers.add(newNumber)
+        print("Liczba unikatowych wartości:"+str(len(numbers)))
+    except ValueError:
+        print("To nie jest liczba całkowita.\n")
